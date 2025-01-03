@@ -10,5 +10,7 @@ nnoremap <C-l> $
 nnoremap <C-j> 10j
 nnoremap <C-k> 10k
 
+nnoremap ff :Files<CR>
+
 nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR>
