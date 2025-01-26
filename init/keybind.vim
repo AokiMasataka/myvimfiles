@@ -14,3 +14,6 @@ nnoremap ff :Files<CR>
 
 nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR>
+
+tnoremap <Esc> <C-\><C-n>
+autocmd TermOpen * startinsert

@@ -14,9 +14,13 @@ Plug 'bling/vim-airline'
 
 call plug#end()
 
-let g:coc_global_extensions='@yaegassy/coc-volar'
-let g:coc_global_extensions='coc-deno'
-let g:coc_global_extensions='coc-tsserver'
+let g:coc_global_extensions = [
+    \'@yaegassy/coc-volar',
+    \'coc-deno',
+    \'coc-tsserver',
+    \'coc-rust-analyzer'
+\]
+
 
 " Fern preview
 function! s:fern_settings() abort
