@@ -16,5 +16,16 @@ nnoremap <C-r> :Rg<CR>
 nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=36<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
 tnoremap <Esc> <C-\><C-n>
 autocmd TermOpen * startinsert
+
+
+function! ShowDocumentation()
+    if CocAction('hasProvider', 'hover')
+        call CocActionAsync('doHover')
+    else
+        call feedkeys('K', 'in')
+    endif
+endfunction

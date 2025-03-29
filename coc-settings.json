@@ -1,7 +1,11 @@
 {
-    "inlayHint.enable": false,
     "volar.enable": true,
     "tsserver.enable": true,
     "deno.enable": true,
-    "rust-analyzer.inlayHints.typeHints.enable": false
+
+    "rust-analyzer.enable": true,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    
+    "pyright.enable": true,
+    "python.analysis.autoImportCompletions": false
 }

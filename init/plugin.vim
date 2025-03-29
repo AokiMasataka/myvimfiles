@@ -18,37 +18,25 @@ let g:coc_global_extensions = [
     \'@yaegassy/coc-volar',
     \'coc-deno',
     \'coc-tsserver',
-    \'coc-rust-analyzer'
+    \'coc-rust-analyzer',
+    \'coc-pyright'
 \]
 
 
 " Fern preview
 function! s:fern_settings() abort
-  nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
-  nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
-  nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
-  nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
+    nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
+    nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
+    nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
+    nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
 endfunction
 
 augroup fern-settings
-  autocmd!
-  autocmd FileType fern call s:fern_settings()
+    autocmd!
+    autocmd FileType fern call s:fern_settings()
 augroup END
-
-" coc
-nmap <silent> cd <Plug>(coc-definition)
-nmap <silent> ct <Plug>(coc-type-definition)
-nmap <silent> ci <Plug>(coc-implementation)
-nmap <silent> cr <Plug>(coc-references)
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-nnoremap <silent> K :call ShowDocumentation()<CR>
-
-function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
-  else
-    call feedkeys('K', 'in')
-  endif
-endfunction
+" coc-volar
+au FileType vue let b:coc_root_patterns = ['.git', '.env', 'package.json', 'tsconfig.json', 'jsconfig.json', 'vite.config.ts', 'vite.config.js', 'vue.config.js', 'nuxt.config.ts']
