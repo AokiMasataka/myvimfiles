@@ -1,4 +1,5 @@
 {
+    "inlayHint.enable": false,
     "volar.enable": true,
     "tsserver.enable": true,
     "deno.enable": true,
