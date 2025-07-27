@@ -10,6 +10,11 @@ nnoremap <C-l> $
 nnoremap <C-j> 10j
 nnoremap <C-k> 10k
 
+nmap <silent><nowait> cd <Plug>(coc-definition)
+nmap <silent><nowait> ct <Plug>(coc-type-definition)
+nmap <silent><nowait> ci <Plug>(coc-implementation)
+nmap <silent><nowait> cr <Plug>(coc-references)
+
 nnoremap ff :Files<CR>
 nnoremap <C-r> :Rg<CR>
 
