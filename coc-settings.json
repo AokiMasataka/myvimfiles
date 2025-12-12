@@ -1,0 +1,18 @@
+{
+    "inlayHint.enable": false,
+    "volar.enable": true,
+    "tsserver.enable": true,
+    "deno.enable": true,
+
+    "rust-analyzer.enable": true,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+
+    "pyright.enable": true,
+    "python.analysis.autoImportCompletions": false,
+    "jedi": {
+        "enable": true,
+        "startupMessage": false,
+        "executable.command": "~/.config/nvim/lsp_env/bin/python3.12",
+        "executable.command": "~/.config/nvim/lsp_env/bin/jedi-language-server"
+    }
+}

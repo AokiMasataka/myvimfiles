@@ -13,7 +13,7 @@ set pumblend=5
 
 " editor settings
 set list
-set listchars=tab:\|\
+
 set expandtab
 set tabstop=4
 set shiftwidth=4

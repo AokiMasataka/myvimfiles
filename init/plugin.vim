@@ -11,8 +11,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'bling/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
-
+Plug 'vim-python/python-syntax'
+Plug 'antoinemadec/coc-fzf'
 call plug#end()
+
+autocmd User CocReady call coc#util#install(['coc-jedi'])
+autocmd User CocReady call coc#util#install(['coc-rust-analyzer'])
+autocmd User CocReady call coc#util#install(['coc-deno'])
 
 
 " Fern preview
@@ -33,6 +38,7 @@ nmap <silent> cd <Plug>(coc-definition)
 nmap <silent> ct <Plug>(coc-type-definition)
 nmap <silent> ci <Plug>(coc-implementation)
 nmap <silent> cr <Plug>(coc-references)
+nmap <silent> gr :CocFzfList references<CR>
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
@@ -45,3 +51,11 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+
+
+" Pythonの型ヒントなどに色を付ける (例: PymatchTypeをKeywordと同じ色にする)
+let g:python_highlight_all = 1
+let g:coc_fzf_preview = 'right:50%'
+highlight link pythonType Keyword
+highlight link pythonBuiltins Function
+highlight link pythonPunctuation Operator
