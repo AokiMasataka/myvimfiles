@@ -1,34 +1,11 @@
-# install plugins
+# Setup
 
-```
-:PlugInstall
-```
-
-# Python環境構築
-
-## デフォルトのjedaiのセットアップ
-
-```
-cd ~/.config/nvim
-python -m venv lsp_env
-./lsp_env/bin/python -m pip install jedi-language-server
+```sh
+git clone https://github.com/AokiMasataka/myvimfiles.git ~/.config
+mv ~/.config/myvimfiles ~/.config/nvim
 ```
 
-## プロジェクトごとのセットアップ
-
-```
-cd your/project
-mkdir .vim
-touch .vim/coc-settings.json
-```
-
-```
-# coc-settings.json
-{
-  "jedi": {
-    "extraPaths": [
-      "./.venv/lib/pythonX.Y/site-packages" 
-    ]
-  }
-}
+```sh
+git clone https://github.com/folke/lazy.nvim.git \
+  ~/.local/share/nvim/lazy/lazy.nvim
 ```
