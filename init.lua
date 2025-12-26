@@ -32,4 +32,5 @@ vim.opt.tabstop = 2
 
 require("keymaps")
 require("config.options")
+require("config.python_venv")
 require("lazy").setup("plugins")
