@@ -8,11 +8,7 @@
     "rust-analyzer.inlayHints.typeHints.enable": false,
 
     "pyright.enable": true,
-    "python.analysis.autoImportCompletions": false,
-    "jedi": {
-        "enable": true,
-        "startupMessage": false,
-        "executable.command": "~/.config/nvim/lsp_env/bin/python",
-        "executable.command": "~/.config/nvim/lsp_env/bin/jedi-language-server"
-    }
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.useLibraryCodeForTypes": true
 }

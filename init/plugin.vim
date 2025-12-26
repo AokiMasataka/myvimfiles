@@ -7,7 +7,7 @@ Plug 'yuki-yano/fern-preview.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'bling/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
@@ -15,8 +15,9 @@ Plug 'vim-python/python-syntax'
 Plug 'antoinemadec/coc-fzf'
 call plug#end()
 
-autocmd User CocReady call coc#util#install(['coc-jedi'])
-autocmd User CocReady call coc#util#install(['coc-rust-analyzer'])
+" autocmd User CocReady call coc#util#install(['coc-jedi'])
+autocmd User CocReady call coc#util#install(['coc-pyright'])
+autocmd user cocready call coc#util#install(['coc-rust-analyzer'])
 autocmd User CocReady call coc#util#install(['coc-deno'])
 
 
