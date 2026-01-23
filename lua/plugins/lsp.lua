@@ -12,6 +12,9 @@ return {
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local opts = { buffer = args.buf, silent = true }
+          
+          local client = vim.lsp.get_client_by_id(args.data.client_id)
+        client.server_capabilities.semanticTokensProvider = nil
 
           -- 定義・参照
           vim.keymap.set("n", "cd", vim.lsp.buf.definition, opts)
@@ -33,6 +36,18 @@ return {
         )
         end,
       })
+
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
+      vim.lsp.config("pyright", {
+        capabilities = capabilities,
+      })
+      vim.lsp.enable("pyright")
+      -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- require("lspconfig").pyright.setup({
+      --   capabilities = capabilities,
+      -- })
     end,
   },
 }

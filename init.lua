@@ -16,17 +16,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- =========================
--- Basic settings
--- =========================
-vim.g.mapleader = " "
-
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-
--- =========================
 -- Plugins
 -- =========================
 
@@ -34,3 +23,4 @@ require("keymaps")
 require("config.options")
 require("config.python_venv")
 require("lazy").setup("plugins")
+

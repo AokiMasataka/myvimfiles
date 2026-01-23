@@ -18,6 +18,7 @@ vim.opt.wildmode = { "list", "longest" }
 vim.opt.pumblend = 5
 
 vim.opt.number = true
+vim.opt.relativenumber = false
 
 -- =========================
 -- Editor
@@ -28,6 +29,7 @@ vim.opt.listchars = { tab = "| " }
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.cmd.colorscheme("habamax")
 
 -- =========================
 -- Search
@@ -48,3 +50,8 @@ vim.opt.backspace = { "indent", "eol", "start" }
 -- =========================
 vim.opt.visualbell = true
 vim.opt.errorbells = false
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.g.mapleader = " "
