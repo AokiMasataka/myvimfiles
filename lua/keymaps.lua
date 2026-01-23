@@ -16,4 +16,6 @@ map("n", "<C-l>", "$", opts)
 map("n", "<C-j>", "10j", opts)
 map("n", "<C-k>", "10k", opts)
 
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
 map("n", "<ESC><ESC>", ":nohlsearch<CR>")
