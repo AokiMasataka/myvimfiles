@@ -15,6 +15,7 @@ return {
       "yuki-yano/fern-preview.vim",
     },
     config = function()
+      vim.g['fern#default_hidden'] = true
       vim.api.nvim_create_autocmd("FileType", {
         pattern = "fern",
         callback = function()

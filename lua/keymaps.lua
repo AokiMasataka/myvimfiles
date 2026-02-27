@@ -18,4 +18,14 @@ map("n", "<C-k>", "10k", opts)
 
 vim.keymap.set("n", "gl", vim.diagnostic.open_float)
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "fern",
+  callback = function()
+    vim.keymap.set("n", "n", "<Plug>(fern-action-new-file)", { buffer = true })
+    vim.keymap.set("n", "N", "<Plug>(fern-action-new-dir)", { buffer = true })
+  end,
+})
+
+
+
 map("n", "<ESC><ESC>", ":nohlsearch<CR>")
